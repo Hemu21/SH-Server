@@ -13,10 +13,6 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {
-	res.send(`Running in port ${PORT}`);
-});
-
 io.on("connection", (socket) => {
 	console.log("count+1"+socket.id)
 	socket.emit("me", socket.id);
