@@ -4,12 +4,18 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
 	cors: {
-		origin: "*",
-		methods: [ "GET", "POST" ]
+		origin: ["https://sh-video-chat-messager-hemu21.vercel.app","https://sh-video-chat-messager-omega.vercel.app"],
+		methods: [ "GET", "POST","PUT","DELETE" ]
 	}
 });
 
-app.use(cors());
+const corsOptions = {
+  origin: ["https://sh-video-chat-messager-hemu21.vercel.app","https://sh-video-chat-messager-omega.vercel.app"],
+  optionsSuccessStatus: 200 
+}
+
+
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 5000;
 
