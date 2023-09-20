@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
 });
 
 io.on("connection", (socket) => {
-	console.log("count+1"+socket.id)
 	socket.emit("me", socket.id);
 
 	socket.on("disconnect", () => {
