@@ -10,8 +10,7 @@ const io = require("socket.io")(server, {
 });
 
 const corsOptions = {
-  origin: ["https://sh-video-chat-messager-hemu21.vercel.app","https://sh-video-chat-messager-omega.vercel.app"],
-  optionsSuccessStatus: 200 
+   origin: ["https://sh-video-chat-messager-hemu21.vercel.app","https://sh-video-chat-messager-omega.vercel.app"],
 }
 
 
